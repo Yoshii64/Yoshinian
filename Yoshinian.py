@@ -82,7 +82,7 @@ translation_dict = {
     "fear" : "vawrzh",
     "tired" : "vrendan",
     "hate" : "plañvern",
-    "small" : "mevh",
+    "small" : "gen",
     "big" : "krañv",
     "sleep" : "vrenenn",
     "awake" : "kynenn",
@@ -108,7 +108,7 @@ translation_dict = {
     "fast" : "arned",
     "slow" : "vormarn",
     "earth" : "myrddyn",
-    "ground" : "mevhyn",
+    "ground" : "tarrien",
     "you" : "arn",
     "he" : "eñv",
     "him" : "eñv",
@@ -292,7 +292,12 @@ translation_dict = {
     "third" : "trinan",
     "getting" : "avrekonn",
     "vocabulary" : "arc'hennoner",
-    "hungry" : "rac'h"
+    "hungry" : "rac'h",
+    "dust" : "droust",
+    "smoke" : "mogen",
+    "horse" : "kazeg",
+    "city" : "kaer",
+    "town" : "kaer-genn"
 }
 
 def translate_word(word):
