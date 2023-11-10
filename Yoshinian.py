@@ -1,7 +1,7 @@
 translation_dict = {
     "hello": "hei",
     "bye" : "ddyl",
-    "and": "ha",
+    "and": "ha", # there's also hag
     "welcome": "croma",
     "early": "rulna",
     "middle": "llad",
@@ -283,7 +283,7 @@ translation_dict = {
     "released" : "yennoukant",
     "list" : "aemovenn",
     "offender" : "gwedden",
-    "if" : "awenn",
+    "if" : "chen",
     "fuck" : "merdean",
     "confessed" : "plijan",
     "admitted" : "plijan",
@@ -297,11 +297,13 @@ translation_dict = {
     "smoke" : "mogen",
     "horse" : "kazeg",
     "city" : "kaer",
-    "town" : "kaer-genn"
-    "royalty" : "vreic'hizier"
-    "bourgeois" : "vreic'hizier"
-    "Rennes" : "Raozhen"
-    "Plogoff" : "Plogo"
+    "town" : "kaer-genn",
+    "royalty" : "vreic'hizier",
+    "bourgeois" : "vreic'hizier",
+    "Rennes" : "Raozhen",
+    "Plogoff" : "Plogo",
+    "summer" : "hañv"
+    "winter" : "iverñ"
 }
 
 def translate_word(word):
