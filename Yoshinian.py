@@ -298,6 +298,10 @@ translation_dict = {
     "horse" : "kazeg",
     "city" : "kaer",
     "town" : "kaer-genn"
+    "royalty" : "vreic'hizier"
+    "bourgeois" : "vreic'hizier"
+    "Rennes" : "Raozhen"
+    "Plogoff" : "Plogo"
 }
 
 def translate_word(word):
