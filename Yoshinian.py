@@ -8,10 +8,10 @@ translation_dict = {
     "late": "mear",
     "dark": "mezh",
     "day": "ddawr",
-    "morning": "dawr rulna",
-    "afternoon": "dawr lladd",
-    "evening": "dawr mear",
-    "night": "ddawr mezh",
+    "morning": "dulna",
+    "afternoon": "daidd",
+    "evening": "dear",
+    "night": "dezh",
     "one": "un",
     "two": "tro",
     "three": "tri",
@@ -30,20 +30,20 @@ translation_dict = {
     "us" : "er",
     "me" : "de",
     "i" : "de",
-    "im" : "dem",
+    "im" : "d'im",
     "in" : "o",
-    "I am" : "d'ir",
+    "I am" : "de imev",
     "good" : "dañv",
     "bad" : "dwr",
     "yes" : "enno",
     "no" : "nage",
-    "america" : "America",
-    "wales" : "Cymdu",
+    "america" : "Amerika",
+    "wales" : "Kembrau",
     "brittany" : "Breizh",
-    "ireland" : "Irdhland",
-    "scotland" : "Alba",
+    "ireland" : "Iwerzhon",
+    "scotland" : "Albann",
     "language" : "yaith",
-    "going" : "nyzynn",
+    "going" : "nezhen",
     "make" : "kyn",
     "has" : "ddynin",
     "had" : "ddynin",
@@ -94,9 +94,9 @@ translation_dict = {
     "probably" : "acyn",
     "will" : "yozh",
     "soon" : "rulyd",
-    "cold" : "ddyn",
+    "cold" : "arddyn",
     "warm" : "byn",
-    "sun" : "byrañv",
+    "sun" : "deol",
     "moon" : "meddyn",
     "light" : "mynyth",
     "moving" : "drañ",
@@ -107,8 +107,10 @@ translation_dict = {
     "lie" : "dwrlau",
     "fast" : "arned",
     "slow" : "vormarn",
-    "earth" : "myrddyn",
+    "earth" : "tarrien",
     "ground" : "tarrien",
+    "star" : "senou",
+    "tree" : "kerdien",
     "you" : "arn",
     "he" : "eñv",
     "him" : "eñv",
@@ -302,27 +304,34 @@ translation_dict = {
     "bourgeois" : "vreic'hizier",
     "Rennes" : "Raozhen",
     "Plogoff" : "Plogo",
-    "summer" : "hañv"
-    "winter" : "iverñ"
+    "summer" : "hañv",
+    "winter" : "iverñ",
+    "sky" : "nev"
 }
 
 def translate_word(word):
+    # Separate punctuation from the word
+    word_without_punctuation = word.rstrip('.,!?;:')
+    punctuation = word[len(word_without_punctuation):]
+
     # Check if the word is in the dictionary
-    if word in translation_dict:
-        return translation_dict[word]
+    if word_without_punctuation.lower() in translation_dict:
+        # Translate the word and add back the punctuation
+        translated_word = translation_dict[word_without_punctuation.lower()] + punctuation
+        return translated_word
     else:
         return word  # Return the original word if translation not found
 
 def translate_sentence(sentence):
     # Split the input sentence into words
     words = sentence.split()
-    
+
     # Translate each word and store the translations in a list
-    translated_words = [translate_word(word.lower()) for word in words]
-    
+    translated_words = [translate_word(word) for word in words]
+
     # Join the translated words to form the translated sentence
     translated_sentence = ' '.join(translated_words)
-    
+
     return translated_sentence
 
 # Input sentence to translate
