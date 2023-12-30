@@ -306,7 +306,8 @@ translation_dict = {
     "Plogoff" : "Plogo",
     "summer" : "hañv",
     "winter" : "iverñ",
-    "sky" : "nev"
+    "sky" : "nev",
+    "nice" : "neiz"
 }
 
 def translate_word(word):
