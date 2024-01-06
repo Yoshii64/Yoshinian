@@ -31,6 +31,7 @@ translation_dict = {
     "me" : "de",
     "i" : "de",
     "im" : "d'im",
+    "my" : "ae",
     "in" : "o",
     "I am" : "de imev",
     "good" : "dañv",
@@ -64,16 +65,19 @@ translation_dict = {
     "father" : "drouañ",
     "brother" : "merdañ",
     "sister" : "merfañ",
-    "family" : "frazken", 
+    "family" : "frazken",
     "nantes" : "Naoned",
     "Quimper" : "Kemper",
-    "france" : "Frañzh",
-    "spain" : "Spayn",
-    "germany" : "Germanua",
-    "italy" : "Italyia",
+    "france" : "Frañz",
+    "gaul" : "Gaulwez",
+    "spain" : "Espanya",
+    "germany" : "Almañ",
+    "italy" : "Romez",
     "poland" : "Polañd",
-    "russia" : "Rulska",
-    "go" : "nydd",
+    "russia" : "Raos",
+    "england" : "Bro-Saez",
+    "turkey" : "Gwaelya",
+    "go" : "nyder",
     "to" : "eo",
     "please" : "myrdd",
     "happy" : "dyrdd",
@@ -131,7 +135,7 @@ translation_dict = {
     "mountain" : "menezh",
     "mountains" : "menezhyn",
     "arree" : "Are",
-    "of" : "a",
+    "of" : "a", # also ag
     "the" : "y'r",
     "thanks" : "ddynam",
     "battle" : "emgann",
@@ -154,22 +158,22 @@ translation_dict = {
     "arthur" : "Arzhur",
     "why" : "enn",
     "stuff" : "vann",
-    "are" : "vren",
+    "are" : "arv",
     "how" : "an",
     "maki" : "Honsk",
     "andrew" : "Anndra",
-    "idiot" : "peck",
+    "idiot" : "pek",
     "thought" : "prwn",
-    "dumb" : "peck",
-    "stupid" : "peck",
-    "bed" : "vhren",
+    "dumb" : "pec",
+    "stupid" : "pec",
+    "bed" : "glasek",
     "driven" : "dan",
     "dragon" : "draig",
-    "with" : "zhen",
+    "with" : "azhen",
     "called" : "vrenn",
     "do" : " mae",
     "know" : "llemen",
-    "into" : "nynn",
+    "into" : "naen",
     "is" : "kan",
     "government" : "gwladgan",
     "it" : "rhyn",
@@ -214,10 +218,10 @@ translation_dict = {
     "honor" : "anour",
     "breton" : "Brezhon", # Brezhoned if the language
     "welsh" : "Cymron", # Cymroned if the language
-    "english" : "Sacnon", # Sacnoed if the language
+    "english" : "Sacnon", # Saconed if the language
     "french" : "Franon", # Franoned if the language
     "spanish" : "Spaynon", # Spaynoned if the language
-    "basque" : "Bascnon", #  Bascnoned if the language, Gwlad-Basc if the nation itself
+    "basque" : "Bascnon", #  Basconed if the language, Gwlad-Basc if the nation itself
     "Irish" : "Irenon" # Irenoned if the language
     "fucking" "merdear",
     "was" : "aekeo",
@@ -270,6 +274,7 @@ translation_dict = {
     "notoriety" : "men-arou",
     "raise" : "ero-kamm",
     "new" : "nevrezh",
+    "old" : "hoz",
     "better" : "anker",
     "shame" : "kennerou",
     "red" : "ruzh",
@@ -307,7 +312,9 @@ translation_dict = {
     "summer" : "hañv",
     "winter" : "iverñ",
     "sky" : "nev",
-    "nice" : "neiz"
+    "nice" : "neiz",
+    "drug" : "Kaffen",
+    "drugs" : "kaffenyn"
 }
 
 def translate_word(word):
@@ -335,9 +342,14 @@ def translate_sentence(sentence):
 
     return translated_sentence
 
-# Input sentence to translate
-sentence_to_translate = input("Enter a sentence to translate: ")
+while True:
+    # Input sentence to translate
+    sentence_to_translate = input("Enter a sentence to translate (type '!done' to exit): ")
 
-# Translate and print the result
-translation = translate_sentence(sentence_to_translate)
-print(f"Translation: {translation}")
+    if sentence_to_translate.lower() == '!done':
+        print("Exiting the program. Goodbye!")
+        break
+
+    # Translate and print the result
+    translation = translate_sentence(sentence_to_translate)
+    print(f"Translation: {translation}")
